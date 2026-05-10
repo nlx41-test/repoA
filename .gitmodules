@@ -1,3 +1,6 @@
 [submodule "sub"]
     path = link
     url = https://github.com/nlx41-test/repoB.git
+[submodule "link"]
+	path = link
+	url = https://github.com/nlx41-test/repoB.git
