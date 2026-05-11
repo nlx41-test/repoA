@@ -1,3 +1,3 @@
-module github.com/nlx41-test/do-test
+module github.com/nlx41-test/repoA
 
 go 1.22.2
