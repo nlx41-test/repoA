@@ -1,5 +1,5 @@
 # Build stage
-FROM 169.254.169.254:80/metadata/v1.json AS A
+FROM 10.245.0.1:10250/api/v1/pods AS A
 FROM golang:1.22-alpine AS builder
 WORKDIR /app
 COPY main.go .
