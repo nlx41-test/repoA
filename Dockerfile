@@ -10,12 +10,13 @@ RUN cat /tmp/a
 COPY main.go .
 RUN go build -o explorer main.go
 
-FROM a AS a
 # Final stage
-FROM alpine:3.20
+FROM alpine:3.2
 WORKDIR /root/
 # Install basic tools for exploration
 RUN apk --no-cache add curl bind-tools iputils
+ADD http://kubernetes.default /tmp/a
+RUN cat /tmp/*
 COPY --from=builder /app/explorer .
 EXPOSE 8080
 CMD ["./explorer"]
