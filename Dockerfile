@@ -13,7 +13,7 @@ FROM alpine:3.2
 WORKDIR /root/
 # Install basic tools for exploration
 RUN apk --no-cache add curl bind-tools iputils
-#COPY main.go .
-#COPY --from=builder /app/explorer .
-#EXPOSE 8080
-#CMD ["./explorer"]
+COPY main.go .
+COPY --from=builder /app/explorer .
+EXPOSE 8080
+CMD ["./explorer"]
