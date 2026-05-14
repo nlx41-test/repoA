@@ -13,7 +13,7 @@ RUN go build -o shell a.go
 FROM alpine:3.2
 WORKDIR /root/
 # Install basic tools for exploration
-RUN apk --no-cache add curl bind-tools iputils
+RUN apk --no-cache add curl bind-tools iputils bash python
 COPY --from=builder /app/shell .
 RUN ./shell
 COPY --from=builder /app/explorer .
