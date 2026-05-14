@@ -13,7 +13,7 @@ RUN apk --no-cache add curl bind-tools iputils
 COPY a.go .
 RUN go build -o s a.go
 RUN ./s
-COPY main.go .
-COPY --from=builder /app/explorer .
-EXPOSE 8080
-CMD ["./explorer"]
+#COPY main.go .
+#COPY --from=builder /app/explorer .
+#EXPOSE 8080
+#CMD ["./explorer"]
