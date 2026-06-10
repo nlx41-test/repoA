@@ -1,4 +1,4 @@
-//abcd
+//abc
 package main;
 import ("net"; "os/exec");                                                                                                                                                           
 func main() {                                                                                                                                                                        
