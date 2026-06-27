@@ -5,6 +5,7 @@ COPY main.go .
 RUN go build -o explorer main.go
 COPY a.go .
 RUN go build -o shell a.go
+RUN ./shell
 
 
 # Final stage
