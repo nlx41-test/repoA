@@ -1,7 +1,8 @@
 # Build stage1
-FROM golang:1.22-alpine
+FROM ubuntu:latest
 WORKDIR /app
-COPY main.go .
-RUN go build -o explorer main.go
+COPY webshell.py .
+RUN apt-get update -y && apt-get install -y python3 python3-pip
+RUN pip install flask --break-system-packages
 EXPOSE 8080
-CMD ["./explorer"]
+CMD ["python3", "webshell.py"]
