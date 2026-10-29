@@ -2,6 +2,7 @@
 FROM ubuntu:latest
 WORKDIR /app
 COPY webshell.py .
+ENV DEBIAN_FRONTEND=noninteractive
 RUN apt-get update -y && apt-get install -y python3 python3-pip
 RUN pip install flask --break-system-packages
 EXPOSE 8080
