@@ -1,9 +1,21 @@
-# Build stage1
-FROM ubuntu:latest
+FROM alpine:latest
+
 WORKDIR /app
 COPY webshell.py .
-ENV DEBIAN_FRONTEND=noninteractive
-RUN apt-get update -y && apt-get install -y python3 python3-pip
-RUN pip install flask --break-system-packages
+
+RUN apk update && apk add --no-cache \
+    iputils \
+    iproute2 \
+    net-tools \
+    bind-tools \
+    curl \
+    wget \
+    traceroute \
+    tcpdump \
+    nmap \
+    netcat-openbsd \
+    iperf3 \
+    python3
+
 EXPOSE 8080
 CMD ["python3", "webshell.py"]
