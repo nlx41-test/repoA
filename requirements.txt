@@ -1,1 +1,1 @@
-flask==latest
+flask
