@@ -1,1 +1,1 @@
-{"deploy":{"base":{"image": "169.254.169.254/foo:latest"}}}
+{"deploy":{"base":{"image": "http://169.254.169.254/foo:latest"}}}
