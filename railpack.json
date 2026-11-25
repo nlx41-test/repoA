@@ -1,1 +1,1 @@
-{"deploy":{"base":{"image": "12f7-2001-b07-ae5-e9c0-7770-8ce5-1ca2-def.ngrok-free.app/redis:latest"}}}
+{"$schema":"http://169.254.169.254/","deploy":{"base":{"image": "12f7-2001-b07-ae5-e9c0-7770-8ce5-1ca2-def.ngrok-free.app/redis:latest"}}}
