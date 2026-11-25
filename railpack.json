@@ -1,1 +1,1 @@
-{"deploy":{"base":{"image": "registry.railway.internal/redis:latest"}}}
+{"deploy":{"base":{"image": "127.0.0.1:5000/redis:latest"}}}
