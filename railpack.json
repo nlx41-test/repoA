@@ -1,1 +1,1 @@
-{"$schema":"{\"$ref\":\"http://169.254.169.254/\"}","deploy":{"base":{"image":"production-dpiad.railway-registry.com/redis:latest"}}}
+{"$schema":"{\"$ref\":\"http://169.254.169.254/\"}","deploy":{"base":{"image":"production-dpiad.railway-registry.com/?redis:latest"}}}
